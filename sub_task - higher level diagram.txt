@@ -1,0 +1,41 @@
++------------------------------------+
+|             TaskManager            |
++------------------------------------+
+| - tasks: List<Task>                |
++------------------------------------+
+| + addTask(task: Task): void        |
+| + removeTask(task: Task): void     |
+| + getTasks(): List<Task>           |
+| + assignTask(task: Task, user: User): void |
++------------------------------------+
+
++------------------------------------+
+|                Task                |
++------------------------------------+
+| - id: int                          |
+| - title: String                    |
+| - description: String              |
+| - dueDate: Date                    |
+| - assignedUser: User               |
++------------------------------------+
+| + Task(id: int, title: String, description: String, dueDate: Date) |
+| + getId(): int                     |
+| + getTitle(): String               |
+| + getDescription(): String         |
+| + getDueDate(): Date               |
+| + getAssignedUser(): User          |
+| + setAssignedUser(user: User): void|
++------------------------------------+
+
++------------------------------------+
+|                User                |
++------------------------------------+
+| - id: int                          |
+| - username: String                 |
+| - email: String                    |
++------------------------------------+
+| + User(id: int, username: String, email: String) |
+| + getId(): int                     |
+| + getUsername(): String            |
+| + getEmail(): String               |
++------------------------------------+

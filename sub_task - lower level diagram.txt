@@ -1,0 +1,91 @@
+import java.util.Date;
+
+public class Task {
+    private int id;
+    private String title;
+    private String description;
+    private Date dueDate;
+    private User assignedUser;
+
+    public Task(int id, String title, String description, Date dueDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Date getDueDate() {
+        return dueDate;
+    }
+
+    public User getAssignedUser() {
+        return assignedUser;
+    }
+
+    public void setAssignedUser(User user) {
+        this.assignedUser = user;
+    }
+}
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class TaskManager {
+    private List<Task> tasks;
+
+    public TaskManager() {
+        this.tasks = new ArrayList<>();
+    }
+
+    public void addTask(Task task) {
+        tasks.add(task);
+    }
+
+    public void removeTask(Task task) {
+        tasks.remove(task);
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void assignTask(Task task, User user) {
+        task.setAssignedUser(user);
+    }
+}
+
+public class User {
+    private int id;
+    private String username;
+    private String email;
+
+    public User(int id, String username, String email) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
